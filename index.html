@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Cadeau</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="page page-1">
+    <main class="stage">
+      <section class="card-wrap">
+        <!-- CADRE DE COEURS -->
+        <div class="hearts-frame top" aria-hidden="true"></div>
+        <div class="hearts-frame right" aria-hidden="true"></div>
+        <div class="hearts-frame bottom" aria-hidden="true"></div>
+        <div class="hearts-frame left" aria-hidden="true"></div>
+
+        <!-- PERSONNAGES -->
+        <img class="garland mickey" src="./assets/mickey.png" alt="" />
+        <img class="garland minnie" src="./assets/minnie.png" alt="" />
+        <img class="garland elsa" src="./assets/elsa.png" alt="" />
+        <img class="garland belle" src="./assets/belle.png" alt="" />
+
+        <!-- CARTE -->
+        <div class="card">
+          <p class="kicker">Petite énigme</p>
+          <h1 class="question">Quel est le nom de famille du dessinateur de Mickey ?</h1>
+
+          <form id="pwdForm" class="form">
+            <label class="label" for="pwd">Mot de passe</label>
+            <input
+              id="pwd"
+              class="input"
+              type="password"
+              placeholder="Écris la réponse…"
+              autocomplete="off"
+              required
+            />
+            <button class="btn" type="submit">Valider</button>
+            <p id="status" class="status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Transition coeurs -->
+      <div id="transition" class="transition" aria-hidden="true">
+        <div class="transition-inner">
+          <span class="t-heart">♥</span><span class="t-heart">♥</span><span class="t-heart">♥</span><span class="t-heart">♥</span><span class="t-heart">♥</span>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
