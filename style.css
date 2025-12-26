@@ -201,26 +201,39 @@ body{
 .hearts-frame.right{ right: 6px; }
 
 /* Transition coeurs */
-.transition{
-  position:absolute;
-  inset:0;
-  display:grid;
-  place-items:center;
-  opacity:0;
-  pointer-events:none;
-  background: rgba(255,255,255,0.14);
-  backdrop-filter: blur(3px);
-  transition: opacity 260ms ease;
+.transition {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
 }
-.transition.show{ opacity:1; pointer-events:auto; }
 
-.transition-inner{
-  display:flex;
-  gap:12px;
-  font-size: clamp(34px, 6vw, 80px);
-  color: rgba(255,255,255,0.95);
-  text-shadow: 0 18px 40px rgba(0,0,0,0.18);
+.transition.show {
+  opacity: 1;
 }
+
+.transition-inner {
+  display: flex;
+  gap: 14px;
+  font-size: 64px;
+  color: #ff4aa3;
+}
+
+.t-heart {
+  animation: pop 0.6s ease forwards;
+}
+
+@keyframes pop {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
 
 .t-heart{
   transform: translateY(10px) scale(0.9);
